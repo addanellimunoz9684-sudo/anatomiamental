@@ -1,70 +1,42 @@
-const Footer = () => {
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+export default function Footer() {
   return (
-    <footer className="bg-gray-50">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Contacto</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>Email: contacto@anatomiamental.com</li>
-              <li>Teléfono: (123) 456-7890</li>
-              <li>Dirección: Tu dirección aquí</li>
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Enlaces Rápidos</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="/servicios" className="text-gray-600 hover:text-teal-600">
-                  Servicios
-                </a>
-              </li>
-              <li>
-                <a href="/sobre-nosotros" className="text-gray-600 hover:text-teal-600">
-                  Sobre Nosotros
-                </a>
-              </li>
-              <li>
-                <a href="/blog" className="text-gray-600 hover:text-teal-600">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="/contacto" className="text-gray-600 hover:text-teal-600">
-                  Contacto
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Social Media */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Síguenos</h3>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-600 hover:text-teal-600">
-                Facebook
-              </a>
-              <a href="#" className="text-gray-600 hover:text-teal-600">
-                Instagram
-              </a>
-              <a href="#" className="text-gray-600 hover:text-teal-600">
-                Twitter
-              </a>
+    <footer className="site-footer">
+      <div className="container">
+        <div className="footer-content">
+          <section className="footer-contact">
+            <h3>Contacto para ayuda psicológica en línea</h3>
+            <form className="contact-form">
+              <input type="text" placeholder="Nombre completo *" required />
+              <input type="email" placeholder="Correo electrónico *" required />
+              <textarea placeholder="¿Cómo podemos ayudarte? *" required></textarea>
+              <button type="submit" className="submit-button">Enviar mensaje</button>
+            </form>
+          </section>
+          
+          <section className="footer-info">
+            <div className="footer-brand">
+              <h4>Anatomía Mental</h4>
+              <p>Bienestar mental, apoyo emocional, psicoterapia, terapia cognitiva, ansiedad</p>
+              <p className="contact-email">Contacto: sascil.garcia@anatomiamental.com</p>
             </div>
-          </div>
+            <div className="social-links">
+              <a href="https://www.facebook.com/profile.php?id=61560208131955" target="_blank" rel="noopener noreferrer" className="social-link">Facebook</a>
+              <a href="https://www.instagram.com/anatomiamental" target="_blank" rel="noopener noreferrer" className="social-link">Instagram</a>
+              <a href="https://www.tiktok.com/@anatomiamental" target="_blank" rel="noopener noreferrer" className="social-link">TikTok</a>
+            </div>
+          </section>
         </div>
-
-        <div className="mt-8 pt-8 border-t border-gray-200">
-          <p className="text-center text-gray-500">
-            © {new Date().getFullYear()} Anatomía Mental. Todos los derechos reservados.
+        
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()}. Todos los derechos reservados.</p>
+          <p className="disclaimer">
+            Este sitio web utiliza cookies para proporcionar la funcionalidad necesaria del sitio y mejorar su experiencia.
           </p>
         </div>
       </div>
     </footer>
-  );
-};
-
-export default Footer;
+  )
+}

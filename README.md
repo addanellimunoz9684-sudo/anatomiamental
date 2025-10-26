@@ -1,30 +1,72 @@
-# React + TypeScript + Vite
+# Anatomía Mental
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma web dedicada a la psicología, salud mental y bienestar emocional. Un espacio donde encontrarás apoyo y recursos para mejorar tu salud psicológica, emocional y física.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Blog Especializado**: Artículos y recursos sobre salud mental
+- **Secciones Principales**:
+  - Autoayuda y Psicología
+  - Psicología Laboral
+  - Neuropsicología
+  - Servicios de Salud Mental
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Vite
+- React Router
+- CSS Modules
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Clona el repositorio:
+```bash
+git clone https://github.com/addanellimunoz9684-sudo/anatomiamental.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Instala las dependencias:
+```bash
+cd anatomiamental
+npm install
+```
+
+3. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en `http://localhost:5173`
+
+## Estructura del Proyecto
+
+```
+src/
+  ├── assets/        # Imágenes y recursos estáticos
+  ├── components/    # Componentes reutilizables
+  ├── pages/         # Páginas principales
+  ├── styles/        # Archivos CSS
+  ├── hooks/         # Custom hooks
+  └── utils/         # Utilidades y helpers
+```
+
+## Scripts Disponibles
+
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Compila el proyecto para producción
+- `npm run lint` - Ejecuta el linter
+- `npm run preview` - Vista previa de la build de producción
+
+## Contribuir
+
+Si deseas contribuir al proyecto:
+
+1. Haz fork del repositorio
+2. Crea una nueva rama para tu feature
+3. Haz commit de tus cambios
+4. Envía un pull request
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
