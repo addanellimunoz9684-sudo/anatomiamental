@@ -1,0 +1,68 @@
+.mission-vision-section {
+  padding: var(--section-spacing) 0;
+  background: var(--gray-50);
+}
+
+.mission-vision-section .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.mission-container,
+.vision-container {
+  padding: 32px;
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.mission-vision-section h2 {
+  color: var(--accent);
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.mission-container p {
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.vision-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vision-container li {
+  color: var(--text);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-200);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 28px;
+}
+
+.vision-container li:last-child {
+  border-bottom: none;
+}
+
+.vision-container li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .mission-vision-section .container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

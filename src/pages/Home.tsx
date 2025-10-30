@@ -1,5 +1,8 @@
 import React from 'react'
 import PostCard from '../components/PostCard'
+import MissionVision from '../components/MissionVision'
+import Profile from '../components/Profile'
+import Services from '../components/Services'
 import { usePosts } from '../hooks/usePosts'
 
 export default function Home() {
@@ -19,6 +22,12 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <MissionVision />
+      
+      <Profile />
+      
+      <Services />
 
       <section className="categories-section">
         <h2>Explora</h2>
