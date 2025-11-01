@@ -73,6 +73,70 @@ const seed: Post[] = [
     readingTime: 10,
     featured: true
   }
+  ,
+  {
+    id: '4',
+    title: 'Mindfulness para principiantes: cómo empezar',
+    author: 'María López',
+    content: `El mindfulness o atención plena es una práctica que nos ayuda a anclar la mente en el presente y reducir la reactividad ante el estrés. No necesitas horas al día; con minutos bien dirigidos puedes notar beneficios.
+
+    Ejercicios sencillos:
+    1. Respiración consciente (3-5 minutos)
+    2. Escaneo corporal breve
+    3. Observación de pensamientos sin juicio
+
+    Lo importante es la constancia y la amabilidad contigo mismo mientras practicas.`,
+    excerpt: 'Prácticas sencillas de mindfulness para reducir el estrés y mejorar la concentración.',
+    category: 'bienestar-emocional',
+    tags: ['mindfulness', 'atención plena', 'estrés', 'autocuidado'],
+    createdAt: new Date('2025-03-10').getTime(),
+    readingTime: 3,
+    coverImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97'
+  },
+  {
+    id: '5',
+    title: 'Rutinas de sueño saludables para mejorar tu bienestar',
+    author: 'Dr. Carlos Medina',
+    content: `Dormir bien es fundamental para la regulación emocional y la memoria. Muchas veces subestimamos el impacto de hábitos sencillos en la calidad del sueño.
+
+    Consejos prácticos:
+    - Mantén horarios regulares de sueño
+    - Reduce pantallas antes de dormir
+    - Evita estimulantes en la tarde
+    - Crea una rutina de relajación previa al sueño
+
+    Si los problemas persisten, consulta con un profesional para evaluar causas subyacentes.`,
+    excerpt: 'Mejora tu descanso con hábitos simples que favorecen la salud mental y el rendimiento diario.',
+    category: 'salud-mental',
+    tags: ['sueño', 'hábitos', 'bienestar', 'salud mental'],
+    createdAt: new Date('2025-05-15').getTime(),
+    readingTime: 4,
+    coverImage: 'https://images.unsplash.com/photo-1504198453319-5ce911bafcde'
+  },
+  {
+    id: '6',
+    title: 'Cómo pedir ayuda: señales y pasos prácticos',
+    author: 'Addanelli Muñoz',
+    content: `Saber pedir ayuda es una habilidad clave para la salud mental. Reconocer señales y dar pasos concretos facilita el acceso a apoyo cuando lo necesitas.
+
+    Señales para buscar ayuda:
+    - Cambios en el sueño o apetito
+    - Pérdida de interés en actividades
+    - Dificultad para realizar tareas diarias
+
+    Pasos prácticos:
+    1. Habla con alguien de confianza
+    2. Busca recursos comunitarios o profesionales
+    3. Anota tus síntomas y cómo te afectan
+
+    Pedir ayuda es un acto de valentía y cuidado hacia ti mismo.`,
+    excerpt: 'Identifica señales de alerta y pasos simples para pedir apoyo profesional o de tu red cercana.',
+    category: 'terapia',
+    tags: ['apoyo', 'ayuda profesional', 'señales', 'salud mental'],
+    createdAt: new Date('2025-07-20').getTime(),
+    readingTime: 2,
+    coverImage: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1'
+  }
 ]
 
 function readStorage(): Post[] {

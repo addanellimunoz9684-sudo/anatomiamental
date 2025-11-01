@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+// Footer does not use Link currently
 
 export default function Footer() {
   return (

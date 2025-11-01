@@ -1,12 +1,22 @@
-import React from 'react'
 import PostCard from '../components/PostCard'
 import MissionVision from '../components/MissionVision'
 import Profile from '../components/Profile'
 import Services from '../components/Services'
 import { usePosts } from '../hooks/usePosts'
+import TopicsIndex from '../components/TopicsIndex'
+import '../styles/components/topicsIndex.css'
+import { useSearchParams } from 'react-router-dom'
+import { useMemo } from 'react'
 
 export default function Home() {
   const { posts } = usePosts()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const category = searchParams.get('category') ?? ''
+
+  const filteredPosts = useMemo(() => {
+    if (!category) return posts
+    return posts.filter(p => p.category === category)
+  }, [posts, category])
 
   return (
     <div className="home-page">
@@ -32,6 +42,9 @@ export default function Home() {
       <section className="categories-section">
         <h2>Explora</h2>
         <div className="categories-grid">
+          <div style={{ gridColumn: '1 / -1' }}>
+            <TopicsIndex />
+          </div>
           <div className="category-card">
             <h3>Autoayuda y Psicología</h3>
             <p>Tu guía personal</p>
@@ -49,8 +62,14 @@ export default function Home() {
 
       <section className="latest-posts">
         <h2>Últimas Publicaciones</h2>
+        {category && (
+          <div className="filter-banner">
+            <span>Filtrando por: <strong>{category}</strong></span>
+            <button className="clear-filter" onClick={() => setSearchParams({})}>Borrar filtro</button>
+          </div>
+        )}
         <div className="posts-grid">
-          {posts.map((p) => (
+          {filteredPosts.map((p) => (
             <PostCard key={p.id} post={p} />
           ))}
         </div>

@@ -1,0 +1,124 @@
+.topics-index {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(12, 38, 63, 0.06);
+  margin-bottom: 1.25rem;
+}
+
+.topics-header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.topics-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.topics-search {
+  background: #f3f6fb;
+  border: 1px solid #e6eef8;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  min-width: 160px;
+}
+
+.topics-search:focus {
+  outline: 2px solid rgba(59,130,246,0.15);
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.06);
+}
+
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.topic-item {
+  display: block;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.topic-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+}
+
+.topic-link:hover,
+.topic-link:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(12,38,63,0.06);
+  background: #ffffff;
+}
+
+.topic-left {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.topic-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #f6f9ff;
+  font-size: 1.1rem;
+}
+
+.topic-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.topic-count {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  min-width: 34px;
+  text-align: center;
+}
+
+.topics-footer {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-all {
+  font-size: 0.9rem;
+  color: #2563eb;
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .topics-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+  .topics-search { min-width: 100%; }
+}
