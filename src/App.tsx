@@ -7,6 +7,7 @@ import Asesoria from './pages/services/Asesoria'
 import Talleres from './pages/services/Talleres'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import BackToTop from './components/BackToTop'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <BackToTop />
     </div>
   )
 }
