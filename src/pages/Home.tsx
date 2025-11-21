@@ -7,6 +7,8 @@ import TopicsIndex from '../components/TopicsIndex'
 import '../styles/components/topicsIndex.css'
 import { useSearchParams } from 'react-router-dom'
 import { useMemo } from 'react'
+import PostSearch from '../components/PostSearch'
+import '../styles/components/postSearch.css'
 
 export default function Home() {
   const { posts } = usePosts()
@@ -14,8 +16,17 @@ export default function Home() {
   const category = searchParams.get('category') ?? ''
 
   const filteredPosts = useMemo(() => {
-    if (!category) return posts
-    return posts.filter(p => p.category === category)
+    const q = searchParams.get('q') ?? ''
+    const byCategory = category ? posts.filter(p => p.category === category) : posts
+    if (!q) return byCategory
+    const lower = q.toLowerCase()
+    return byCategory.filter(p => {
+      return (
+        p.title.toLowerCase().includes(lower) ||
+        p.excerpt.toLowerCase().includes(lower) ||
+        p.tags.join(' ').toLowerCase().includes(lower)
+      )
+    })
   }, [posts, category])
 
   return (
@@ -68,6 +79,7 @@ export default function Home() {
             <button className="clear-filter" onClick={() => setSearchParams({})}>Borrar filtro</button>
           </div>
         )}
+        <PostSearch />
         <div className="posts-grid">
           {filteredPosts.map((p) => (
             <PostCard key={p.id} post={p} />

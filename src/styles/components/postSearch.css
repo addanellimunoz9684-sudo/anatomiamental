@@ -1,0 +1,25 @@
+.post-search {
+  margin: 0 0 1rem 0;
+}
+
+.post-search-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #e6eef8;
+  background: #fafcff;
+  font-size: 0.95rem;
+}
+
+.post-search-input:focus {
+  outline: 2px solid rgba(37,99,235,0.12);
+  box-shadow: 0 6px 18px rgba(12,38,63,0.04);
+}
+
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
