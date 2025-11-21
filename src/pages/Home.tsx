@@ -9,6 +9,8 @@ import { useSearchParams } from 'react-router-dom'
 import { useMemo } from 'react'
 import PostSearch from '../components/PostSearch'
 import '../styles/components/postSearch.css'
+import CategoryFilter from '../components/CategoryFilter'
+import '../styles/components/categoryFilter.css'
 
 export default function Home() {
   const { posts } = usePosts()
@@ -80,6 +82,7 @@ export default function Home() {
           </div>
         )}
         <PostSearch />
+        <CategoryFilter />
         <div className="posts-grid">
           {filteredPosts.map((p) => (
             <PostCard key={p.id} post={p} />

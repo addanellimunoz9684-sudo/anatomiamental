@@ -1,0 +1,40 @@
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.chip {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #e6eef8;
+  background: #fbfdff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(12,38,63,0.04);
+}
+
+.chip.active {
+  background: linear-gradient(90deg,#eef2ff,#fff);
+  border-color: #c7d2fe;
+}
+
+.chip-count {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .chip { padding: 0.4rem 0.55rem; font-size: 0.85rem }
+}
