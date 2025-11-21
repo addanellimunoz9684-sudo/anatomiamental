@@ -1,4 +1,4 @@
-import type { Post } from '../types'
+import type { Post, PsychologyCategory } from '../types'
 
 const STORAGE_KEY = 'anatomia_posts_v1'
 
@@ -139,6 +139,17 @@ const seed: Post[] = [
   }
 ]
 
+const VALID_CATEGORIES: PsychologyCategory[] = [
+  'salud-mental',
+  'autoayuda',
+  'psicologia-laboral',
+  'neuropsicologia',
+  'neurodiversidad',
+  'bienestar-emocional',
+  'terapia',
+  'desarrollo-personal'
+]
+
 function readStorage(): Post[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
@@ -167,6 +178,14 @@ export function fetchPosts(): Post[] {
 
 export function createPost(data: Omit<Post, 'id' | 'createdAt'>): Post {
   const posts = readStorage()
+  // Validación runtime: category debe existir y ser válida
+  if (!data.category || !VALID_CATEGORIES.includes(data.category as PsychologyCategory)) {
+    throw new Error(
+      `createPost: campo 'category' faltante o inválido. Valores válidos: ${VALID_CATEGORIES.join(
+        ', '
+      )}`
+    )
+  }
   const newPost: Post = {
     ...data,
     id: Date.now().toString(),

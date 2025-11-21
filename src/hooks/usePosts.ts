@@ -21,9 +21,14 @@ export function usePosts() {
   }
 
   function addPost(data: Omit<Post, 'id' | 'createdAt'>) {
-    const newPost = api.createPost(data)
-    setPosts((currentPosts: Post[]) => [newPost, ...currentPosts])
-    return newPost
+    try {
+      const newPost = api.createPost(data)
+      setPosts((currentPosts: Post[]) => [newPost, ...currentPosts])
+      return newPost
+    } catch (error) {
+      console.error('Error creando post:', error)
+      return null
+    }
   }
 
   return {
