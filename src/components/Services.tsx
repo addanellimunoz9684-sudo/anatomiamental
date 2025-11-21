@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../styles/components/services.css'
 
 export default function Services() {
@@ -72,9 +73,14 @@ export default function Services() {
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
-              <button className="contact-button">
-                Solicitar Información
-              </button>
+              <Link to={
+                service.id === 1 ? '/servicios/terapia-individual' :
+                service.id === 2 ? '/servicios/terapia-pareja' :
+                service.id === 3 ? '/servicios/asesoria' :
+                '/servicios/talleres'
+              } className="contact-button">
+                Más información
+              </Link>
             </div>
           ))}
         </div>
