@@ -6,6 +6,7 @@ import { usePosts } from '../hooks/usePosts'
 import TopicsIndex from '../components/TopicsIndex'
 import '../styles/components/topicsIndex.css'
 import { useSearchParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useMemo } from 'react'
 import PostSearch from '../components/PostSearch'
 import '../styles/components/postSearch.css'
@@ -43,6 +44,7 @@ export default function Home() {
             Encuentra aquí apoyo y recursos para mejorar tu salud psicológica,
             emocional y física en nuestro blog especializado.
           </p>
+          <Link to="/servicios/terapia-individual" className="hero-cta">Agenda una consulta</Link>
         </div>
       </section>
 
