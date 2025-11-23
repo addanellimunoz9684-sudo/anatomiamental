@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../styles/components/services.css'
+import AnimateOnScroll from './AnimateOnScroll'
 
 export default function Services() {
   const services = [
@@ -63,25 +64,27 @@ export default function Services() {
         </p>
 
         <div className="services-grid">
-          {services.map((service) => (
-            <div key={service.id} className="service-card">
-              <div className="service-icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p className="service-description">{service.description}</p>
-              <ul className="service-features">
-                {service.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-              <Link to={
-                service.id === 1 ? '/servicios/terapia-individual' :
-                service.id === 2 ? '/servicios/terapia-pareja' :
-                service.id === 3 ? '/servicios/asesoria' :
-                '/servicios/talleres'
-              } className="contact-button">
-                Más información
-              </Link>
-            </div>
+          {services.map((service, idx) => (
+            <AnimateOnScroll key={service.id} delay={idx * 80} className="service-card-wrap">
+              <div className="service-card">
+                <div className="service-icon">{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p className="service-description">{service.description}</p>
+                <ul className="service-features">
+                  {service.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+                <Link to={
+                  service.id === 1 ? '/servicios/terapia-individual' :
+                  service.id === 2 ? '/servicios/terapia-pareja' :
+                  service.id === 3 ? '/servicios/asesoria' :
+                  '/servicios/talleres'
+                } className="contact-button">
+                  Más información
+                </Link>
+              </div>
+            </AnimateOnScroll>
           ))}
         </div>
 

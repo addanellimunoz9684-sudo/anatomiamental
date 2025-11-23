@@ -86,8 +86,8 @@ export default function Home() {
         <PostSearch />
         <CategoryFilter />
         <div className="posts-grid">
-          {filteredPosts.map((p) => (
-            <PostCard key={p.id} post={p} />
+          {filteredPosts.map((p, i) => (
+            <PostCard key={p.id} post={p} index={i} />
           ))}
         </div>
       </section>
