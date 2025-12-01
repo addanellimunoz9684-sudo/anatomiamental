@@ -57,7 +57,11 @@ export default function Services() {
   return (
     <section className="services-section">
       <div className="container">
-        <h2 className="section-title">Nuestros Servicios</h2>
+        <div className="services-header" style={{ backgroundImage: `url('/src/assets/Servicios 2.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', height: '300px', marginBottom: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+          <div style={{ textAlign: 'center' }}>
+            <h2 className="section-title" style={{ color: 'white' }}>Nuestros Servicios</h2>
+          </div>
+        </div>
         <p className="section-description">
           Ofrecemos una variedad de servicios psicológicos adaptados a tus necesidades,
           con un enfoque profesional y personalizado.

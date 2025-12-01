@@ -22,7 +22,7 @@ const seed: Post[] = [
     tags: ['neurodiversidad', 'inclusión', 'desarrollo', 'psicología'],
     createdAt: new Date('2025-01-08').getTime(),
     readingTime: 1,
-    coverImage: 'https://images.unsplash.com/photo-1665180702781-a580dbf92b8c'
+    coverImage: '/src/assets/Articulo 1-2.jpg'
   },
   {
     id: '2',
@@ -44,7 +44,8 @@ const seed: Post[] = [
     tags: ['resiliencia', 'desarrollo personal', 'bienestar', 'salud mental'],
     createdAt: new Date('2024-08-02').getTime(),
     readingTime: 1,
-    featured: true
+    featured: true,
+    coverImage: '/src/assets/articulo 2-2.jpg'
   },
   {
     id: '3',
@@ -71,9 +72,9 @@ const seed: Post[] = [
     tags: ['home office', 'salud mental', 'productividad', 'balance', 'trabajo remoto'],
     createdAt: new Date('2024-08-02').getTime(),
     readingTime: 10,
-    featured: true
-  }
-  ,
+    featured: true,
+    coverImage: '/src/assets/articulo 3-2.jpg'
+  },
   {
     id: '4',
     title: 'Mindfulness para principiantes: cómo empezar',
@@ -91,7 +92,7 @@ const seed: Post[] = [
     tags: ['mindfulness', 'atención plena', 'estrés', 'autocuidado'],
     createdAt: new Date('2025-03-10').getTime(),
     readingTime: 3,
-    coverImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97'
+    coverImage: '/src/assets/articulo 4-2.jpg'
   },
   {
     id: '5',
@@ -111,7 +112,7 @@ const seed: Post[] = [
     tags: ['sueño', 'hábitos', 'bienestar', 'salud mental'],
     createdAt: new Date('2025-05-15').getTime(),
     readingTime: 4,
-    coverImage: 'https://images.unsplash.com/photo-1504198453319-5ce911bafcde'
+    coverImage: '/src/assets/Blog 2.png'
   },
   {
     id: '6',
@@ -135,7 +136,7 @@ const seed: Post[] = [
     tags: ['apoyo', 'ayuda profesional', 'señales', 'salud mental'],
     createdAt: new Date('2025-07-20').getTime(),
     readingTime: 2,
-    coverImage: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1'
+    coverImage: '/src/assets/Blog 2.png'
   }
 ]
 

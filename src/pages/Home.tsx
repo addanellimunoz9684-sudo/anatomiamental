@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      <section className="hero-section">
+      <section className="hero-section" style={{ backgroundImage: `url('/src/assets/Portada 2.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="hero-content">
           <h1>Anatomia Mental</h1>
           <p className="hero-subtitle">

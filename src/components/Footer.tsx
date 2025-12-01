@@ -1,3 +1,5 @@
+import contactoImg from '../assets/contacto 2.jpg'
+
 // Footer does not use Link currently
 
 export default function Footer() {
@@ -6,6 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <section className="footer-contact">
+            <img src={contactoImg} alt="Contacto" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px', marginBottom: '1.5rem' }} />
             <h3>Contacto para ayuda psicológica en línea</h3>
             <form className="contact-form">
               <input type="text" placeholder="Nombre completo *" required />
